@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+
+<div class="home-div">
+    <div class="home-container">
+
+<div>
+    <form action="/bookdetail" method="POST">
+        <h2>Enter Book ISBN Number</h2>
+        <input class="isbn" type="text" name="isbn" placeholder="Enter Book ISBN Number" required>
+        <!-- <button type="submit" class="login-btn" >Search</button> -->
+</div>
+
+<div class="textarea-div">
+    <h2>Enter Author Name</h2>
+    <input class="author" type="text" name="bookauthor" placeholder="author" required>
+    <h2>Enter Date on which book is read</h2>
+        <input type="date" class="date" name="date">
+        <h2>Enter Recommendation Rating</h2>
+        <input class="rating" type="text" name="rating" placeholder="Rating" required>
+    <h2>Enter Your Review </h2>
+    <textarea class="book-review" name="bookReview" rows="20" cols="50" placeholder="Type your Review here....">
+        </textarea>
+        <h2>Enter Your Notes </h2>
+        <textarea class="book-notes" name="bookNotes" rows="20" cols="50">
+        </textarea>
+        
+
+        <button type="submit" class="post-btn" >Post</button>
+        </form>
+</div>
+
+    </div>
+    </div>

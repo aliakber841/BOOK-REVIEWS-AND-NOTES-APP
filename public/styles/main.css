@@ -1,0 +1,323 @@
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: #E8ECEF; */
+    background-color: white;
+    font-family: "General Sans";
+}
+.starting-page-container{
+    padding-left: 13rem;
+    padding-right: 10rem;
+    padding-top: 8rem;
+}
+.app-name{
+    text-align: center;
+    padding-right: 6rem;
+}
+.logo{
+    padding-left: 21rem;
+}
+.starting-page-buttons a{
+    background-color: black;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.starting-page-buttons{
+    margin-left: 24rem;
+    margin-top: 1rem;
+}
+
+.register,.login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    height: 100vh;
+}
+
+.register-container,.login-container{
+    width: 400px;
+	height: 500px;
+	overflow: hidden;
+	border-radius: 10px;
+    background-color: white;
+	box-shadow: 5px 20px 50px #000;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.register-text{
+    text-align: center;
+}
+.username-text,.email-text,.password-text{
+    font-size: 17px;
+    padding:  10px;
+}
+.username,.email,.password,.isbn,.rating,.author,.date{
+    width: 90%;
+    height: 30px;
+   margin: 10px;
+   font-size: 17px;
+}
+.isbn,.rating,.date,.author{
+    width: 40%;
+    margin-left: 40px;
+}
+.register-btn,.login-btn,.logout-btn,.post-btn{
+    background: #000;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 150px;
+    cursor: pointer;
+}
+.post-btn{
+    margin-bottom: 30px;
+    margin-left: 23rem;
+}
+.login-btn{
+    margin-left: 165px;
+}
+.google-div{
+margin-top: 30px;
+}
+.google-btn,.login-google-btn{
+    text-decoration: none;
+    background: #000000;
+    color: white;
+    margin-left: 100px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.login-google-btn{
+    margin-left: 110px;
+}
+
+.home-div{
+    height: auto;
+    width: 100%;
+    background-color: white;
+}
+.home-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin: 0 17rem;
+}
+.home-user{
+   padding-left: 20px;
+   padding-top: 5px;
+   letter-spacing: 3px;
+   font-size: 50px;
+}
+.books-read{
+    padding-left: 30px;
+    letter-spacing: 5px;
+}
+.logout-div{
+    display: flex;
+}
+.add-book{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #000;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 24px;
+    margin-left: 30px;
+}
+.logout-btn{
+    margin-left: 40px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.book-review,.book-notes{
+    resize: none;
+}
+.textarea-div textarea{
+    width: 100%;
+    white-space: prewrap;
+    font-size: 20px;
+}
+
+.book-main{
+    margin: 0 18rem;
+    background-color: white;
+}
+
+
+.book-container,.book-notes-container{
+    display: flex;
+    padding-top: 20px;
+    height: auto;
+    width: 100%;
+    font-family: 'Georgia';
+    margin-bottom: 100px;
+}
+
+.book-notes-container{
+    margin: 0px 16rem;
+    height: auto;
+    width: 60vw;
+    padding-right: 30px;
+}
+.notes{
+    white-space: pre-wrap;
+    font-size: 20px;
+    margin-right: 40px;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    line-height: 30px;
+}
+.readDate{
+    color: #6B6666;
+    font-weight: 700;
+    font-family: "General Sans"; 
+    font-size: 18px;
+}
+.rating,.isbn,.isbn-home{
+    white-space: nowrap;
+    color: #6B6666;
+    font-weight: 600;
+    font-family: "General Sans"; 
+}
+.isbn-home{
+    padding-top: 3px;
+    padding-left: 30px;
+}
+.date-isbn-div{
+    display: flex;
+}
+.book-image{
+    height: 210px;
+    padding-top: 25px;
+    float: left;
+    margin-right: 30px;
+}
+.booktitle{
+    letter-spacing: 2px;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #660066;
+    font-weight: 500;
+}
+.see-notes{
+    font-size: 20px;
+    color: blue;
+    padding-left: 20px;
+    font-weight: 600;
+}
+.book-detail-div{
+    padding-left: 30px;
+    width: 100%;
+}
+.b-review{
+    margin-left: 20px;
+   font-size: 20px;
+   word-wrap: break-word; 
+   overflow-wrap: break-word;
+   white-space: pre-wrap;
+   color: #000;
+   line-height: 30px;
+   height: auto;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: end;
+  }
+  
+  .delete-btn ,.cancelbtn,.deletebtn{
+    background: #d83f3f;
+    font-size: 16px;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 24px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  .edit-btn {
+    background: #1c6ae4;
+    font-size: 16px;
+    border: 0;
+    border-radius: 6px;
+    padding: 8px 24px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-left: 10px;
+    text-decoration: none;
+  }
+
+
+/* Modal Form */
+ 
+.cancelbtn, .deletebtn {
+    float: left;
+    width: 50%;
+  }
+  .cancelbtn {
+    background-color: #ccc;
+    color: black;
+  }
+  .container {
+    padding: 16px;
+    text-align: center;
+  }
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: #474e5d;
+    padding-top: 50px;
+  }
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  

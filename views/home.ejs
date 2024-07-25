@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+<div class="home-div">
+    <div class="home-container">
+      <a class="home-user">Welcome back <%= name %>!</a>
+        <div class="logout-div">
+          <a type="button" class="add-book" href="/bookdetail">Click here to add another book </a>
+            <a href="/" type="button" class="logout-btn">Log Out</a>
+        </div>    
+       
+       
+      <hr style="width: 100%;">
+
+    </div>
+  </div>
+
+      <div class="book-main">
+        <% if (books.length > 0) { %>
+          <h1 class="books-read">Books You’ve read</h1>
+          
+          <% books.forEach(function(book) { %>
+
+       <div class="book-container">
+
+        <div class="book-detail-div">
+          <% var bookImage = book.bookimage ? book.bookimage : 'images/no-image.png'; %>
+          <img class="book-image" src="<%= bookImage %>" alt="Book Cover" onerror="this.src='images/no-image.png';"/>
+                  <h1 class="booktitle"><%= book.booktitle.toUpperCase() %> - BY <%= book.bookauthor.toUpperCase() %> </h1>
+                 
+                 
+                    <div class="btn-wrapper">
+                      <button onclick="showModal('<%= book.bookisbn %>')" class="delete-btn">Delete</button>
+                      <div id="deleteModal<%= book.bookisbn %>" class="modal">
+                        <span onclick="hideModal('<%= book.bookisbn %>')" class="close" title="Close Modal">&times;</span>
+                        <form class="modal-content" method="post" action="/delete/<%= book.bookisbn %>">
+                          <div class="container">
+                            <h1>Delete Current Book</h1>
+                            <p>Are you sure you want to delete this book from the list?</p>
+                            <div class="clearfix">
+                              <button type="button" onclick="hideModal('<%= book.bookisbn %>')" class="cancelbtn">Cancel</button>
+                              <button type="submit" class="deletebtn">Delete</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+
+                    <a class="edit-btn" href="/edit/<%= book.bookisbn %>">edit</a>
+                </div>
+    
+                <div class="date-isbn-div">
+                    <p class="readDate" value="yyyy-mm-dd">Read Date: <%= book.readdate.toLocaleDateString("en-GB") %></p>
+                    <p class="isbn-home">ISBN:  <%= book.bookisbn %></p>
+                  </div>
+                
+                  <p class="b-review"> <%= book.review %></p>
+                  <a class="see-notes" href="/booknotes/<%= book.bookisbn %>">Click here to see your notes</a>
+                  <!-- <p><strong>Notes:</strong>  book.notes %></p> -->
+                 
+                </div>
+         
+            </div>   
+            <%   })}  %>    
+      </div>
+
+     
+    
+
+
+      <script>
+        function showModal(isbn) {
+          var modal = document.getElementById('deleteModal' + isbn);
+          if (modal) {
+            modal.style.display = 'block';
+          }
+        }
+      
+        function hideModal(isbn) {
+          var modal = document.getElementById('deleteModal' + isbn);
+          if (modal) {
+            modal.style.display = 'none';
+          }
+        }
+      
+        window.onclick = function(event) {
+          var modals = document.querySelectorAll('.modal');
+          modals.forEach(function(modal) {
+            if (event.target == modal) {
+              modal.style.display = 'none';
+            }
+          });
+        }
+      </script>
+
+      </body>
+      </html>
+       
+   

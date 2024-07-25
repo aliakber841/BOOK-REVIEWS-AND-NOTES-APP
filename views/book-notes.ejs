@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+
+<div class="book-notes-container">
+
+    <div class="book-detail-div">
+      <img class="book-image" src="<%= book.bookimage %>" alt="Book Cover" onerror="this.src='/images/no-image.png';"/>
+
+              <h1 class="booktitle"><%= book.booktitle.toUpperCase() %> BY - <%= book.bookauthor.toUpperCase() %> </h1>
+
+                <p class="readDate" value="yyyy-mm-dd">Read Date: <%= book.readdate.toLocaleDateString("en-GB") %></p>
+                <p class="rating">How Strongly you recommend it :<%= book.rating %>/10</p>
+                <p class=" isbn">ISBN:<%= book.bookisbn %></p>
+            
+            
+              <p class="b-review"> <%= book.review %></p>
+              <!-- <a href="booknotes">Click here to see your notes</a> -->
+               <h1>Your Notes</h1>
+              <p class="notes"><%=  book.notes %></p>
+             
+            </div>
+     
+        </div> 
+
+
+        </body>
+        </html>

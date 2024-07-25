@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Book</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <!-- <h1>Edit Book</h1> -->
+    <form action="/edit/<%= book.isbn %>" method="post">
+        <div class="home-div">
+            <div class="home-container">
+        
+        
+            <form action="/bookdetail" method="POST">
+                <!-- <h2>Enter Book ISBN Number</h2>
+                <input class="isbn" type="text" name="isbn" placeholder="Enter Book ISBN Number" disabled> -->
+                <!-- <button type="submit" class="login-btn" >Search</button> -->
+       
+        
+        <div class="textarea-div">
+            <h2>Edit Author Name</h2>
+            <input class="author" type="text" name="edit_bookauthor" placeholder="author" required value="<%= book.bookauthor %>">
+           
+                <h2>Edit Recommendation Rating</h2>
+                <input class="rating" type="text" name="edit_rating" placeholder="Rating" value="<%= book.rating %>" required>
+            <h2>Edit Your Review </h2>
+            <textarea class="book-review" name="edit_review" rows="20" cols="50" placeholder="Type your Review here...." required>
+                <%= book.review %>
+                </textarea>
+                <h2>Edit Your Notes </h2>
+                <textarea class="book-notes" name="edit_notes" rows="20" cols="50" required>
+                    <%= book.notes %>
+                </textarea>
+                
+        
+                <button type="submit" class="post-btn" >Save Changes</button>
+                </form>
+        </div>
+        
+            </div>
+            </div>
+    </form>
+</body>
+</html>
